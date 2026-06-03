@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <script>
+  let edadTexto = "30 años";
+    let edadNumero = parseInt(edadTexto);
+
+    document.write("<h3>1) Conversión de edad</h3>");
+    document.write("Texto: " + edadTexto + "<br>");
+    document.write("Número: " + edadNumero + "<br><br>");
+
+
+    // 2) Conversión con decimales
+    let precioTexto = "123.333";
+    let precioNumero = parseFloat(precioTexto);
+    let resultado = precioNumero * 5;
+
+    document.write("<h3>2) Conversión con decimales</h3>");
+    document.write("Precio original: " + precioTexto + "<br>");
+    document.write("Multiplicado por 2: " + resultado + "<br><br>");
+
+
+    // 3) Conversión con Number()
+    let numeroIngresado = prompt("3) Ingresá un número:");
+    let numeroConvertido = Number(numeroIngresado);
+
+    document.write("<h3>3) Conversión con Number()</h3>");
+    document.write("Número duplicado: " + (numeroConvertido * 2) + "<br><br>");
+
+
+    // 4) Validar si es número
+    let valor = prompt("4) Ingresá una palabra o número:");
+
+    document.write("<h3>4) Validar si es número</h3>");
+
+    if (isNaN(valor)) {
+        document.write("Lo ingresado NO es un número válido.<br><br>");
+    } else {
+        document.write("Lo ingresado ES un número válido.<br><br>");
+    }
+
+
+    // 5) Redondeo al entero más cercano
+    document.write("<h3>5) Redondeo con Math.round()</h3>");
+    document.write("Math.round(7.3): " + Math.round(7.3) + "<br>");
+    document.write("Math.round(7.8): " + Math.round(7.8) + "<br>");
+    document.write("7.3 redondea hacia abajo y 7.8 hacia arriba.<br><br>");
+
+
+    // 6) Redondear hacia abajo
+    let piso = Math.floor(9.9);
+
+    document.write("<h3>6) Math.floor()</h3>");
+    document.write("Resultado: " + piso + "<br><br>");
+
+
+    // 7) Redondear hacia arriba
+    let techo = Math.ceil(2.01);
+
+    document.write("<h3>7) Math.ceil()</h3>");
+    document.write("Resultado: " + techo + "<br><br>");
+
+
+    // 8) Mayor y menor valor
+    let num1 = 15;
+    let num2 = 40;
+    let num3 = 7;
+
+    document.write("<h3>8) Mayor y menor valor</h3>");
+    document.write("Mayor: " + Math.max(num1, num2, num3) + "<br>");
+    document.write("Menor: " + Math.min(num1, num2, num3) + "<br><br>");
+
+
+    // 9) Porcentaje de avance
+    let progreso = Math.floor(Math.random() * 101);
+
+    document.write("<h3>9) Porcentaje de avance</h3>");
+    document.write("Progreso: " + progreso + "%<br><br>");
+
+
+    // 10) Conversión a porcentaje entero
+    let decimal = 0.728;
+    let porcentaje = Math.round(decimal * 100);
+
+    document.write("<h3>10) Conversión a porcentaje</h3>");
+    document.write("Resultado: " + porcentaje + "%<br><br>");
+
+
+
+    // =====================================
+    // FUNCIONES CON TEXTOS
+    // =====================================
+
+    // 1) Convertir número a texto
+    let numero = 12345;
+    let texto = String(numero);
+
+    document.write("<h3>1) Convertir número a texto</h3>");
+    document.write("Tipo antes: " + typeof(numero) + "<br>");
+    document.write("Tipo después: " + typeof(texto) + "<br><br>");
+
+
+    // 2) Pasar a mayúsculas
+    let nombre = prompt("2) Ingresá tu nombre:");
+    let nombreMayuscula = nombre.toUpperCase();
+
+    document.write("<h3>2) Pasar a mayúsculas</h3>");
+    document.write("Hola " + nombreMayuscula + "<br><br>");
+
+
+    // 3) Pasar a minúsculas
+    let email = "Ejemplo@Gmail.com";
+
+    document.write("<h3>3) Pasar a minúsculas</h3>");
+    document.write(email.toLowerCase() + "<br><br>");
+
+
+    // 4) Eliminar espacios
+    let frase = "    Hola mundo    ";
+
+    document.write("<h3>4) Eliminar espacios</h3>");
+    document.write(frase.trim() + "<br><br>");
+
+
+    // 5) Buscar palabra clave
+    let oracion = "Este tema es importante para estudiar";
+
+    document.write("<h3>5) Buscar palabra clave</h3>");
+
+    if (oracion.includes("importante")) {
+        document.write("La palabra 'importante' está presente.<br><br>");
+    } else {
+        document.write("La palabra no está presente.<br><br>");
+    }
+
+
+    // 6) Extraer caracteres
+    let apellido = "Gonzalez";
+
+    document.write("<h3>6) Extraer primeros caracteres</h3>");
+    document.write(apellido.substring(0,3) + "<br><br>");
+
+
+    // 7) Últimas letras
+    let palabra = "desarrollador";
+
+    document.write("<h3>7) Últimas letras</h3>");
+    document.write(palabra.slice(-4) + "<br><br>");
+
+
+    // 8) Combinar nombre y apellido
+    let nom = "Juan";
+    let ape = "Pérez";
+
+    document.write("<h3>8) Nombre completo</h3>");
+    document.write(nom + " " + ape + "<br><br>");
+
+
+    // 9) Firma personalizada
+    let persona = "Ana";
+    let puesto = "Diseñadora";
+
+    document.write("<h3>9) Firma personalizada</h3>");
+    document.write("Atentamente, " + persona + " - " + puesto + "<br><br>");
+
+
+    // 10) Comparación sensible
+    let contraseña = "ContraSeña123";
+
+    document.write("<h3>10) Contraseña en minúsculas</h3>");
+    document.write(contraseña.toLowerCase() + "<br><br>");
+
+
+
+    // =====================================
+    // FUNCIONES CON FECHAS
+    // =====================================
+
+    // 1) Mostrar fecha actual
+    let fecha = new Date();
+
+    document.write("<h3>1) Fecha actual</h3>");
+    document.write(fecha + "<br><br>");
+
+
+    // 2) Fecha local en español
+    document.write("<h3>2) Fecha en español</h3>");
+    document.write(fecha.toLocaleDateString("es-AR") + "<br><br>");
+
+
+    // 3) Milisegundos actuales
+    document.write("<h3>3) Milisegundos actuales</h3>");
+    document.write(Date.now() + "<br><br>");
+
+
+    // 4) Año de nacimiento
+    let nacimiento = prompt("4) Ingresá tu año de nacimiento:");
+    let añoActual = new Date().getFullYear();
+    let edad = añoActual - nacimiento;
+
+    document.write("<h3>4) Edad aproximada</h3>");
+    document.write("Tu edad es: " + edad + " años<br><br>");
+
+
+    // 5) Formato personalizado
+    let dia = fecha.getDate();
+    let mes = fecha.getMonth() + 1;
+    let año = fecha.getFullYear();
+
+    document.write("<h3>5) Fecha personalizada</h3>");
+    document.write("Día: " + dia + " - Mes: " + mes + " - Año: " + año);
+        
+       
+    </script>
+</body>
+</html>
