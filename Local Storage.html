@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+  
+
+    <h1>Almacenamiento Local</h1>
+
+    <script>
+
+        escribirLocal();
+        leerLocal();
+
+        function escribirLocal() {
+
+            let usuario = { nombre: "Enzo", rol:"Profesor",nivel: "A1"};
+            localStorage.setItem("preferencia_Usuario", JSON.stringify(usuario));
+            localStorage.setItem("color_fondo", "#ffffff");
+        }
+        function leerLocal() {
+          let datoslocales = localStorage.getItem("preferencia_Usuario");
+          let codigocolor = localStorage.getItem("color_fondo");
+          let persona = JSON.parse(datoslocales);
+          window.alert(persona.nombre);
+          window.alert(codigocolor);
+
+        };
+    </script>
+</body>
+</html>

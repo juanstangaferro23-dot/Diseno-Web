@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSONactividades</title>
+</head>
+<body>
+      <h1>Actividad 1</h1>
+    <script>
+let texto = {"nombre":"juan","apellido":"stangaferro","edad":"17","nacionalidad":"argentina"}
+const persona=(texto);
+console.log(texto);
+    </script> 
+
+    <table border="1">
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Categoria </th>
+    </tr>
+    <script>
+      
+        const productos = [
+    {nombre: "Zapatilla Nike", precio: "$25.000", categoria: "Calzado"},
+    {nombre: "Remera de Barcelona", precio: "$10.500", categoria: "Vestimenta"},
+    {nombre: "Reloj (Rolex)", precio: "US$ 140.000", categoria: "Indumentaria"},
+    {nombre: "Auto", precio: "US$ 30.000", categoria: "Vehículo"},
+    {nombre: "Moto", precio: "US$ 4.500", categoria: "Vehículo"},
+];
+    for(let i = 0; i < productos.length; i++){
+        document.write("<tr>");
+        document.write("<td>" + productos[i].nombre + "</td>");
+        document.write("<td>" + productos[i].precio + "</td>");
+        document.write("<td>" + productos[i].categoria + "</td>");
+        document.write("</tr>");
+    }
+    /* console.log("Nombre: " + productos[i].nombre);
+    console.log("Precio: " + productos[i].precio);
+    console.log("Categoría: " + productos[i].categoria); */
+    </script>
+    </table>
+
+<script>
+</script>
+</body>
+</html>

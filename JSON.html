@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON (Notacion de Objetos Java)</title>
+</head>
+<body>
+    <h1>MI Formato JSON</h1>
+    <script>
+        let texto = '{"nombre":"juan","edad":"17","ciudad":"resistencia"}';
+                               /* Propiedad: "Valor" */
+         const persona = JSON.parse(texto)
+         console.log(persona.nombre + "-" + persona.ciudad);
+         /* let persona = JSON.parse(Texto) */
+        /*  let persona = JSON.parse('{"nombre":"juan","edad":"17","ciudad":"resistencia"}')
+ */
+    </script>
+
+    <hr>
+
+    <script>
+const  alumnos = [
+    {nombre: "messi",edad:39,ciudad:"resistencia"},
+    {nombre: "messi",edad:39,ciudad:"resistencia"},
+    {nombre: "messi",edad:39,ciudad:"resistencia"},
+    {nombre: "messi",edad:39,ciudad:"resistencia"},
+    {nombre: "messi",edad:39,ciudad:"resistencia"},
+];
+
+for(let i in alumnos){
+ console.log(   )
+}
+    </script>
+</body>
+</html>

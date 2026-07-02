@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DActividades Ploty JS</title>
+    <script src="https://cdn.plot.ly/plotly-3.6.0.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <br>
+         <div id="Ventas" style="width:600px;height:400px;"></div>
+         <hr>
+    <script>
+    var xMeses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio' ];
+
+var yIngresos = [20, 14,68, 85, 130, 200];
+
+var trace1 = {
+  x: xMeses,
+  y: yIngresos,
+  type: 'bar',
+  text: yIngresos.map(String),
+  textposition: 'auto',
+  hoverinfo: 'none',
+  marker: {
+    color: 'rgb(127,255,212)',
+    opacity: 0.6,
+    line: {
+      color: 'rgb(0,0,0)',
+      width: 1.5
+    }
+  }
+};
+
+var data = [trace1];
+
+var layout = {
+  title: {
+    text: 'Ventas Mensuales'
+  },
+  barmode: 'stack'
+};
+
+Plotly.newPlot('Ventas', data, layout);
+</script>
+
+<br>
+ <div id="Alumnos" style="width:600px;height:400px;"></div>
+<hr>
+<script>
+var data = [
+  {
+    x: ['Diseño', 'Programacion', 'Marketing', 'Administracion'],
+    y: [59, 65, 40, 55],
+    type: 'bar'
+  }    
+];
+ var layout ={ 
+  title: {
+    text: 'Alumos Por Carrera'
+  } }
+
+Plotly.newPlot('Alumnos', data, layout);
+</script>
+
+<br>
+ <div id="Temperatura" style="width:600px;height:400px;"></div>
+<hr>
+
+<script>
+var xValue = ['Buenos Aires', 'Cordoba', 'Mendoza', 'Salta'];
+
+var yValue = [18, 25, 23, 13];
+
+var trace1 = {
+  x: xValue,
+  y: yValue,
+  type: 'bar',
+  text: yValue.map(String),
+  textposition: 'auto',
+  hoverinfo: 'none',
+  marker: {
+    color: 'rgb(158,202,225)',
+    opacity: 0.6,
+    line: {
+      color: 'rgb(0,0,0)',
+      width: 1.5
+    }
+  }
+};
+
+var data = [trace1];
+
+var layout = {
+  title: {
+    text: 'Temperaturas Promedio'
+  },
+  barmode: 'stack'
+};
+
+Plotly.newPlot('Temperatura', data, layout);
+</script>
+</body>
+</html>
