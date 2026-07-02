@@ -7,104 +7,755 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <style>
+    .fondoCarrusel { width: 100vw;
+  height: 100vh;
+  background: 
+    radial-gradient(circle at 30% 80%, rgba(0, 70, 5, 0.8) 0%, transparent 60%),
+    linear-gradient(to bottom, #d4fc34 0%, #30b300 40%, #005c07 100%);
+  background-blend-mode: multiply;  } 
+        .FondoFooster{  
+         background: linear-gradient(115deg, purple 0%, rgb(53, 0, 114) 40%, blue 100%);
+        }
+        .banderas{height: 70px;
+        width: 120px;}
 </style>
-<body class="body"> 
-    <div class="container" >
-        <div class="row">
-            <div class="col">
-                <!-- menu -->
-             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="container-fluid">
-                 <a class="navbar-brand" href="#">Inicio</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                 <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="#">Estadisticas</a>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link" href="#">fixtour</a>
-                 </li>
-                 <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Fases
-                     </a>
-                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <li><a class="dropdown-item" href="#">16° Avos de Final</a></li>
-                     <li><a class="dropdown-item" href="#">Cuartos de Final</a></li>
-                     <li><a class="dropdown-item" href="#">Semifinal y 3° Puesto</a></li>
-                     <li><a class="dropdown-item" href="#">Final Del Mundial 2026</a></li>
-                 </li>
-                 </li>
-                 </ul>
-               </div>
-               </div>
-               </nav> 
-               </div>
 
-                 <div class="col text-end  " >
-                    <!-- Logo -->
-                     <img src="fifa.jpg" height="40px" width="70px">
-                 </div>
-               
+<body class="m-0 p-0 overflow-hidden">
 
-<div class="row text-center p-3 mb-2 bg-success text-white">
-    <!-- Carrusel -->
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<div class="d-flex flex-column vh-100">
+<!-- MENU-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light m-0  ">
+  <div class="container-fluid m-0 p-0 ">
 
-        <div class="carousel-inner">
+    <a class="navbar-brand ms-2" href="#">Inicio</a>
 
-            <div class="carousel-item active">
-                <img src="fifa.jpg" height="400" class="d-block w-100" alt="Imagen 1">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto mb-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Estadísticas</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Fixtour</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            Fases
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">16° Avos de Final</a></li>
+            <li><a class="dropdown-item" href="#">Cuartos de Final</a></li>
+            <li><a class="dropdown-item" href="#">Semifinal y 3° Puesto</a></li>
+            <li><a class="dropdown-item" href="#">Final Del Mundial 2026</a></li>
+          </ul>
+
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- LOGO -->
+    <img src="fifa.jpg" height="60" width="70" class="me-2">
+
+  </div>
+</nav>
+
+
+  <!-- CARRUSEL -->
+   <div id="carouselExampleInterval"
+     class="carousel slide flex-grow-1 d-flex align-items-center justify-content-center fondoCarrusel"
+     data-bs-ride="carousel">
+
+  <div class="carousel-inner text-center" id="TituloGrupo">
+
+    <!-- GRUPO A -->
+    <div class="carousel-item active" data-bs-interval="2000"><h1 class="text-white">GRUPO A</h1>
+
+      <div class="container">
+        <div class="row justify-content-center g-3 ">
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/mx.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">México</div>
+              </div>
             </div>
+          </div>
 
-            <div class="carousel-item">
-                <img src="fifa.jpg" height="400" class="d-block w-100" alt="Imagen 2">
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/za.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Sudáfrica</div>
+              </div>
             </div>
+          </div>
 
-            <div class="carousel-item">
-                <img src="fifa.jpg" height="400" class="d-block w-100" alt="Imagen 3">
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/kr.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Corea del Sur</div>
+              </div>
             </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/cz.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Republica Checa</div>
+              </div>
+            </div>
+          </div>
 
         </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
+      </div>
 
     </div>
-</div>
-             
 
-         
-  
-        <div class="alert alert-primary text-center" role="alert" >
-            <!-- Footer -->
-            Juan Stangaferro
+    <!-- GRUPO B -->
+    <div class="carousel-item" data-bs-interval="2000"><h1 class="text-white">GRUPO B</h1>
+
+      <div class="container">
+        <div class="row justify-content-center g-3">
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/ca.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Canada</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/ba.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Bosnia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/qa.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Qatar</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/ch.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Suiza</div>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
+
+    </div>
+<!-- GRUPO C -->
+     <div class="carousel-item" data-bs-interval="2000"><h1 class="text-white">GRUPO C</h1>
+
+      <div class="container">
+        <div class="row justify-content-center g-3">
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/br.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Brasil</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/ma.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Marruecos</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/ht.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Haiti</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/gb-sct.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Escocia</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+<!-- GRUPO D -->
+  <div class="carousel-item" data-bs-interval="2000"><h1 class="text-white">GRUPO D</h1>
+
+      <div class="container">
+        <div class="row justify-content-center g-3">
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/us.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Estados Unidos</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/py.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Paraguay</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/au.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Australia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/tr.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Turquia</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- GRUPO E -->
+      <div class="carousel-item" data-bs-interval="2000"><h1 class="text-white">GRUPO E</h1>
+
+      <div class="container">
+        <div class="row justify-content-center g-3">
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/de.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Alemania</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/cw.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Curacao</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/ci.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Costa de Marfil</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/ec.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Ecuador</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- GRUPO F -->
+      <div class="carousel-item" data-bs-interval="2000"><h1 class="text-white">GRUPO F</h1>
+
+      <div class="container">
+        <div class="row justify-content-center g-3">
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/nl.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Paises Bajos</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/jp.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Japon</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/se.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Suecia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/tn.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Tunez</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- GRUPO G -->
+      <div class="carousel-item" data-bs-interval="2000"><h1 class="text-white">GRUPO G</h1>
+
+      <div class="container">
+        <div class="row justify-content-center g-3">
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/be.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Belgica</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/eg.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Egipto</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/ir.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Iran</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/nz.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Nueva Zelanda</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- GRUPO H -->
+      <div class="carousel-item" data-bs-interval="2000"><h1 class="text-white">GRUPO H</h1>
+
+      <div class="container">
+        <div class="row justify-content-center g-3">
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/es.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">España</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/cv.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Cabo Verde</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/sa.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Arabia Saudita</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/uy.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Uruguay</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- GRUPO I -->
+      <div class="carousel-item" data-bs-interval="2000"><h1 class="text-white">GRUPO I</h1>
+
+      <div class="container">
+        <div class="row justify-content-center g-3">
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/fr.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Francia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/sn.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Senegal</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/iq.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Irak</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/no.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Noruega</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- GRUPO J -->
+      <div class="carousel-item" data-bs-interval="2000"><h1 class="text-white">GRUPO J</h1>
+
+      <div class="container">
+        <div class="row justify-content-center g-3">
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/ar.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Argentina</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/dz.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Argelia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/at.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Austria</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/jo.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Jordania</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- GRUPO K -->
+      <div class="carousel-item" data-bs-interval="2000"><h1 class="text-white">GRUPO K</h1>
+
+      <div class="container">
+        <div class="row justify-content-center g-3">
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/pt.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Portugal</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/cd.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">RD Congo</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/uz.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Uzbekistan</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/co.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Colombia</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- GRUPO L -->
+      <div class="carousel-item" data-bs-interval="2000" ><h1 class="text-white">GRUPO L</h1>
+
+      <div class="container">
+        <div class="row justify-content-center g-3">
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/gb-eng.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Inglaterra</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/hr.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Croacia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/gh.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Ghana</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="card p-2">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="https://flagcdn.com/w160/pa.png" class="img-fluid banderas">
+                </div>
+                <div class="col-8">Panama</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
     
+  </div>
+
+  <!-- CONTROLES -->
+  <button class="carousel-control-prev" type="button"
+    data-bs-target="#carouselExampleInterval"
+    data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button"
+    data-bs-target="#carouselExampleInterval"
+    data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+  <!-- FOOTER -->
+  <div class=" text-center text-white py-1 FondoFooster p-0 ">
+    Mundial 2026
+  </div>
+
+</div>
+
+
+</body>
+    
     <script src="seleccionesconbanderas.js"></script>
-   <script>
-    for (const Grupos in datosSelecciones){
-        console.log(Grupos);
-         let selecciones = datosSelecciones [Grupos];
-    for (let i = 0; i < selecciones.length; i++) { 
-         const paisSeleccion = selecciones [i];
-     console.log(paisSeleccion.pais + " - bandera: " + paisSeleccion);
-        }
-    }
-   </script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+ 
 </body>
 </html>

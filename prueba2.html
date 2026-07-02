@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba for</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+    <style>
+        .banderaPortada {
+            width: 90px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pruebas con FOR</h1><br>
+    
+     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="TituloGrupo">
+        <div class="carousel-item active" data-bs-interval="2000">          
+          <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-md-auto">
+                <h2>Nombre del Grupo -1</h2>
+              </div>
+            </div>           
+          </div>
+        </div>        
+      </div>
+      <div class="carousel-inner" id="TituloGrupo">
+        <div class="carousel-item active" data-bs-interval="2000">          
+          <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-md-auto">
+                <h2>Nombre del Grupo 2</h2>
+              </div>
+            </div>           
+          </div>
+        </div>        
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <script src="seleccionesconbanderas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        /* Obtengo los datos del archivo seleccionesconbanderas */
+        const TituloGrupo = document.getElementById("TituloGrupo");
+        for (const Grupos in datosSelecciones) {
+            const selecciones = datosSelecciones[Grupos];
+            let htmlPaises = "";
+            const slide = document.createElement("h3");            
+            for (let i = 0; i < selecciones.length; i++) {
+                const pais = selecciones[i];
+
+                htmlPaises += `               
+                    <img src="${pais.bandera_url}" alt="${pais.pais}">
+                    <h4">${pais.pais}</h4>`;
+            }
+            
+           /*  TituloGrupo.innerHTML = '<div class="alert alert-primary" role="alert">' + Grupos + " - " + htmlPaises + '</div>';   
+
+            TituloGrupo.appendChild(slide); */
+
+        }
+    </script>
+</body>
+</html>
