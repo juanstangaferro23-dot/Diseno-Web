@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase de POO: Catálogo de Celulares</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card-celular {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-celular:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar / Encabezado de la materia -->
+  <nav class="navbar navbar-dark bg-dark mb-5">
+    <div class="container">
+      <span class="navbar-brand mb-0 h1">📱 Clase de Informática: Introducción a POO</span>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="text-center mb-5">
+      <h1 class="display-4 fw-bold text-primary">Catálogo de Productos</h1>
+      <p class="lead text-muted">Modelado de objetos del mundo real mediante clases en JavaScript</p>
+    </header>
+
+    <!-- Contenedor donde JS va a "inyectar" las tarjetas de Bootstrap -->
+    <div id="contenedor-celulares" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+      <!-- Las tarjetas se generarán dinámicamente aquí -->
+    </div>
+  </div>
+
+  <!-- Footer con fines didácticos -->
+  <footer class="bg-light text-center text-muted py-4 mt-5 border-top">
+    <small>Prof. de Informática | HTML, CSS, JS & Bootstrap</small>
+  </footer>
+
+  <!-- Lógica de JavaScript (POO + DOM con Eventos) -->
+  <script>
+    // 1. DEFINICIÓN DE LA CLASE
+    class Celular {
+      constructor(marca, modelo, precio) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.precio = precio;
+      }
+
+      obtenerDescripcion() {
+        return `${this.marca} ${this.modelo} - $${this.precio.toLocaleString('es-AR')}`;
+      }
+    }
+
+    // 2. INSTANCIACIÓN
+    const celularA = new Celular("Motorola", "Edge 40", 650000);
+    const celularB = new Celular("Samsung", "A54", 580000);
+    const celularC = new Celular("Apple", "iPhone 15", 1400000);
+    const celularD = new Celular("Nokia", "Nokia 1100", 25110258);
+    const celularE = new Celular("Xiaomo", "Xiaomi 1100", 100);
+
+    const listaCelulares = [celularA, celularB, celularC, celularD, celularE];
+
+    // 3. MANIPULACIÓN DEL DOM & EVENTOS
+    const contenedor = document.getElementById('contenedor-celulares');
+
+    listaCelulares.forEach(celular => {
+      const columna = document.createElement('div');
+      columna.className = 'col';
+
+      // Nota: Le agregamos una clase "btn-detalle" al botón para poder seleccionarlo después
+      columna.innerHTML = `
+        <div class="card h-100 card-celular shadow-sm">
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <div>
+              <div class="badge bg-secondary mb-2">${celular.marca}</div>
+              <h5 class="card-title fw-bold">${celular.modelo}</h5>
+              <p class="card-text text-muted mt-3">
+                <i class="small">Método output:</i><br>
+                <strong>${celular.obtenerDescripcion()}</strong>
+              </p>
+            </div>
+            <div class="mt-4">
+              <span class="text-success h4 fw-bold">$${celular.precio.toLocaleString('es-AR')}</span>
+              <button class="btn btn-primary w-100 mt-3 btn-detalle">Ver detalles</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Buscamos el botón específico que acabamos de crear DENTRO de esta columna
+      const botonDetalle = columna.querySelector('.btn-detalle');
+      
+      // Le asignamos la función que se ejecutará al hacer clic
+      botonDetalle.addEventListener('click', () => {
+        // Accedemos directamente a los atributos del objeto actual
+        alert(`📝 DETALLES DEL PRODUCTO:\n\n• Dispositivo: ${celular.modelo}\n• Fabricante: ${celular.marca}\n• Precio de lista: $${celular.precio.toLocaleString('es-AR')}\n\n¡Gracias por usar nuestro catálogo POO!`);
+      });
+
+      contenedor.appendChild(columna);
+    });
+  </script>
+
+
+
+  <br><br>
+
+
+
+
+
+  <div class="container">
+
+    <header class="text-center mb-5">
+      <h1 class="display-4 fw-bold text-primary">La Tarjeta de Presentacion</h1>
+    </header>
+    <!-- Contenedor donde JS va a "inyectar" las tarjetas de Bootstrap -->
+    <div id="contenedor-celulares" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+      <!-- Las tarjetas se generarán dinámicamente aquí -->
+    </div>
+  </div>
+  <!-- Footer con fines didácticos -->
+  <footer class="bg-light text-center text-muted py-4 mt-5 border-top">
+    <small>Stangaferro, Juan</small>
+  </footer>
+
+
+<script>
+class Persona {
+      constructor(Nombre, Apellido, Profesion) {
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Profesion = Profesion;
+      }
+
+      obtenerDescripcion() {
+        return `${this.Nombre} ${this.Apellido} - $${this.Profesion}`;}}
+
+    class PersonaA = Persona ("Juan", "Stangaferro", "Ingeniero en Sistemas");
+const ListaPersona = [PersonaA];
+
+const contenedor = document.getElementById('contenedor-Personas');
+    </script>
+
+  <!-- Bootstrap Bundle JS (opcional para componentes interactivos de Bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/js/slides.min.js"></script>
+</body>
+</html>
