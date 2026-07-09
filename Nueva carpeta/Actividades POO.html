@@ -24,7 +24,7 @@
 
 
 <script>
-class Persona {
+class Persona{
       constructor(Nombre, Apellido, Profesion) {
         this.Nombre = Nombre;
         this.Apellido = Apellido;
@@ -34,12 +34,19 @@ class Persona {
       obtenerDescripcion() {
         return `${this.Nombre} ${this.Apellido} - $${this.Profesion}`;}}
 
-    class PersonaA = Persona ("Juan", "Stangaferro", "Ingeniero en Sistemas");
-const ListaPersona = [PersonaA];
+    class PersonaA = new Persona ("Juan", "Stangaferro", "Ingeniero en Sistemas");
+
+const ListaPersonas =  [PersonaA];
 
 const contenedor = document.getElementById('contenedor-Personas');
+
+ListaPersonas.forEach(Persona => {
+      const columna = document.createElement('div');
+      columna.className = 'col';) }
+
     </script>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/js/slides.min.js"></script>
+
 </body>
 </html>

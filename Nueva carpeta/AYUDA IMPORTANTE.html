@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Desarrollo Web</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+<style>
+    /* ---------- ESTILOS GENERALES ---------- */
+
+body{
+    background:#f4f4f4;
+    font-family:Arial, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+h1,h2,h3{
+    color:darkblue;
+    text-align:center;
+}
+
+p{
+    font-size:18px;
+    color:#333;
+}
+
+/* ---------- CLASE ---------- */
+
+.caja{
+    background:white;
+    border:2px solid black;
+    border-radius:10px;
+    margin:20px;
+    padding:20px;
+}
+
+/* ---------- ID ---------- */
+
+#listas{
+    background:greenyellow;
+
+}
+
+/* ---------- IMÁGENES ---------- */
+
+img{
+    width:300px;
+    height:200px;
+    border-radius:15px;
+    border:3px solid blue;
+    display:block;
+    margin:auto;
+}
+
+/* ---------- TABLAS ---------- */
+
+table{
+    width:100%;
+    text-align:center;
+}
+
+/* ---------- FORMULARIO ---------- */
+
+form{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    border:2px solid gray;
+}
+
+/* ---------- BOTONES ---------- */
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* ---------- FLEXBOX ---------- */
+
+.flex{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    gap:20px;
+}
+
+/* ---------- GRID ---------- */
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+
+.grid div{
+    background:white;
+    padding:20px;
+    border:2px solid black;
+    text-align:center;
+}
+
+/* ---------- GRADIENTE ---------- */
+
+header{
+    background:linear-gradient(to right,#0066ff,#00ccff);
+    color:white;
+}
+
+/* ---------- GRADIENTE RADIAL ---------- */
+
+footer{
+    background:radial-gradient(circle,#222,#000);
+}
+
+/* ---------- EFECTOS ---------- */
+
+a{
+    text-decoration:none;
+    color:red;
+}
+
+a:hover{
+    color:blue;
+    font-size:20px;
+    transition:0.3s;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:768px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.flex{
+flex-direction:column;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="bg-dark text-white text-center p-4">
+    <h1>Proyecto Completo de Desarrollo Web</h1>
+    <p>HTML - CSS - Bootstrap - JavaScript</p>
+</header>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">Inicio</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#listas">Listas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#tabla">Tabla</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#formulario">Formulario</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+
+<!-- TEXTOS -->
+<section>
+
+<h2>Textos HTML</h2>
+
+<p>
+Este proyecto reúne todos los temas vistos durante el curso de Desarrollo Web.
+</p>
+
+<strong>Texto en negrita</strong>
+
+<br><br>
+
+<em>Texto en cursiva</em>
+
+<hr>
+
+</section>
+
+<!-- LISTAS -->
+<section id="listas">
+
+<h2>Listas</h2>
+
+<h4>Lista desordenada</h4>
+
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Bootstrap</li>
+<li>JavaScript</li>
+</ul>
+
+<h4>Lista ordenada</h4>
+
+<ol>
+<li>Aprender HTML</li>
+<li>Aprender CSS</li>
+<li>Aprender JavaScript</li>
+</ol>
+
+</section>
+
+<hr>
+
+<!-- ENLACES -->
+<section>
+
+<h2>Enlaces</h2>
+
+<a href="https://google.com" target="_blank">
+Ir a Google
+</a>
+
+<br><br>
+
+<a href="#formulario">
+Ir al formulario
+</a>
+
+</section>
+
+<hr>
+
+<!-- CUENTO -->
+<section>
+
+<h2>Cuento: Tu propia aventura</h2>
+
+<p>
+Estás frente a dos caminos.
+</p>
+
+<a href="#">Entrar al bosque</a>
+
+<br>
+
+<a href="#">Entrar al castillo</a>
+
+</section>
+
+<hr>
+
+<!-- ARTICLE -->
+<article>
+
+<h2>Artículo</h2>
+
+<p>
+HTML organiza la estructura de una página web utilizando etiquetas.
+</p>
+
+</article>
+
+<hr>
+
+<!-- ASIDE -->
+<aside class="alert alert-warning">
+
+<h3>Dato curioso</h3>
+
+<p>
+Bootstrap permite crear páginas modernas de forma rápida.
+</p>
+
+</aside>
+
+<hr>
+
+<!-- TABLA -->
+<section id="tabla">
+
+<h2>Tabla</h2>
+
+<table class="table table-bordered table-striped">
+
+<tr>
+<th>Lenguaje</th>
+<th>Uso</th>
+</tr>
+
+<tr>
+<td>HTML</td>
+<td>Estructura</td>
+</tr>
+
+<tr>
+<td>CSS</td>
+<td>Diseño</td>
+</tr>
+
+<tr>
+<td>JavaScript</td>
+<td>Interactividad</td>
+</tr>
+
+</table>
+
+</section>
+
+<hr>
+
+<!-- IMÁGENES -->
+<section>
+
+<h2>Imágenes</h2>
+
+<img src="https://picsum.photos/300"
+class="img-fluid rounded">
+
+</section>
+
+<hr>
+
+<!-- VIDEO -->
+<section>
+
+<h2>Video</h2>
+
+<iframe
+width="560"
+height="315"
+src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+allowfullscreen>
+</iframe>
+
+</section>
+
+<hr>
+
+<!-- FORMULARIO -->
+<section id="formulario">
+
+<h2>Formulario</h2>
+
+<form>
+
+<div class="mb-3">
+
+<label>Nombre</label>
+
+<input
+type="text"
+class="form-control">
+
+</div>
+
+<div class="mb-3">
+
+<label>Email</label>
+
+<input
+type="email"
+class="form-control">
+
+</div>
+
+<div class="mb-3">
+
+<label>País</label>
+
+<select class="form-select">
+<option>Argentina</option>
+<option>Brasil</option>
+<option>Uruguay</option>
+</select>
+
+</div>
+
+<div class="mb-3">
+
+<label>Comentario</label>
+
+<textarea class="form-control"></textarea>
+
+</div>
+
+<button class="btn btn-success">
+Enviar
+</button>
+
+</form>
+
+</section>
+
+</div>
+
+<footer class="bg-dark text-white text-center p-3 mt-5">
+Proyecto de Desarrollo Web 2026
+</footer>
+<script>
+// VARIABLES
+
+let nombre = "Juan";
+let edad = 17;
+const curso = "Desarrollo Web";
+
+console.log(nombre);
+console.log(edad);
+console.log(curso);
+
+// ESTRUCTURA DE DECISIÓN
+
+if (edad >= 18) {
+    console.log("Es mayor de edad");
+} else {
+    console.log("Es menor de edad");
+}
+
+// SWITCH
+
+let dia = 3;
+
+switch (dia) {
+    case 1:
+        console.log("Lunes");
+        break;
+    case 2:
+        console.log("Martes");
+        break;
+    case 3:
+        console.log("Miércoles");
+        break;
+    default:
+        console.log("Otro día");
+}
+
+// ARREGLOS
+
+let lenguajes = [
+    "HTML",
+    "CSS",
+    "JavaScript"
+];
+
+console.log(lenguajes);
+
+// MÉTODOS DE ARREGLOS
+
+lenguajes.push("Bootstrap");
+lenguajes.pop();
+lenguajes.unshift("Python");
+
+console.log(lenguajes);
+
+lenguajes.forEach(function(item){
+    console.log(item);
+});
+
+// FUNCIONES
+
+function saludar(nombre){
+    alert("Hola " + nombre);
+}
+
+saludar("Juan");
+
+// OTRA FUNCIÓN
+
+function sumar(a,b){
+    return a+b;
+}
+
+console.log(sumar(10,5));
+
+// JSON
+
+let alumno = {
+    nombre:"Juan",
+    edad:18,
+    curso:"Desarrollo Web"
+};
+
+console.log(alumno);
+
+let textoJSON = JSON.stringify(alumno);
+
+console.log(textoJSON);
+
+let objeto = JSON.parse(textoJSON);
+
+console.log(objeto);
+
+// ABM
+
+let alumnos = [];
+
+function alta(nombre){
+    alumnos.push(nombre);
+}
+
+function baja(nombre){
+    alumnos = alumnos.filter(a => a != nombre);
+}
+
+function modificar(viejo,nuevo){
+    let indice = alumnos.indexOf(viejo);
+
+    if(indice != -1){
+        alumnos[indice]=nuevo;
+    }
+}
+
+alta("Juan");
+alta("Pedro");
+alta("Ana");
+
+modificar("Pedro","Carlos");
+
+baja("Ana");
+
+console.log(alumnos);
+
+// API
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(respuesta => respuesta.json())
+.then(datos => {
+
+    console.log(datos);
+
+});
+
+// CHART.JS
+
+const datos = {
+    labels:["HTML","CSS","JS"],
+    datasets:[{
+        label:"Notas",
+        data:[10,9,8]
+    }]
+};
+
+const config = {
+    type:"bar",
+    data:datos
+};
+
+const grafico = new Chart(
+document.getElementById("grafico"),
+config
+);
+</script>
+
+<script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
